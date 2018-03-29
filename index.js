@@ -1,6 +1,7 @@
 var Nightmare = require("nightmare");
 
 Nightmare.action('injectHTML', function (selector, html, done) {
+    console.log('B->', html)
     debugger;
     this.evaluate_now(function (selector, html) {
 
@@ -52,6 +53,7 @@ Nightmare.action('injectHTML', function (selector, html, done) {
 module.exports.fromURL = function (url, path, options, callback) {
     "use strict";
 
+    console.log('A->', url)
     if(typeof options == "function") {
         callback = options;
         options = null;
